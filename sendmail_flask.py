@@ -25,10 +25,10 @@ def send_email():
         if name and email and message:
             subject = subject
             sender = 'stoneshq20@gmail.com'
-            recipients = [email]
+            recipients = ["Gbenga@gbengaeyiolawi.com"]
 
             msg = Message(subject=subject, sender=sender, recipients=recipients)
-            msg.body = f"Name: {name}\nEmail: {email}\n\nSubject:\n{subject}\nMessage:\n{message}"
+            msg.body = f"Name: {name}\nEmail: {email}\n\nSubject:\n{subject}\n\nMessage:\n{message}"
 
             try:
                 mail.send(msg)
@@ -46,6 +46,5 @@ def send_email():
 if __name__ == '__main__':
     app.run()
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
 
