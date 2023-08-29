@@ -3,7 +3,7 @@ from flask_mail import Mail, Message
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/send_email": {"origins": "http://127.0.0.1:5173"}})
 # Configure email settings for Gmail
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
