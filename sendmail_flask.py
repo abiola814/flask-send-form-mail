@@ -1,8 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_mail import Mail, Message
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 # Configure email settings for Gmail
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
